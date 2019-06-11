@@ -1,0 +1,53 @@
+% Page Layout
+\usepackage{geometry}        
+\geometry{letterpaper}
+
+% Refs
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=green,
+}
+
+% Graphics 
+\usepackage{graphicx}
+\graphicspath{{Figs/}}
+\usepackage{subcaption}
+
+% Math
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+\usepackage{bbm}
+\usepackage{amsthm}
+
+\newcommand{\define}{\coloneqq}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\ones}{\mathbbm{1}}
+\newcommand{\sym}{\mathbb{S}}
+\let\Re\undefined
+\DeclareMathOperator{\Re}{Re}
+\let\Im\undefined
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator*{\minimize}{minimize}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\subto}{subject~to}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Diag}{Diag}
+\DeclareMathOperator{\range}{\mathbf{range}}
+\DeclareMathOperator{\nullspace}{\mathbf{null}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+% Date and Time
+\usepackage{datetime}
+\settimeformat{ampmtime}
+
+% References
+\newcommand{\putref}{{\color{red}[REF]}}
+
+% Comments
+\newcommand{\tb}{\color{blue}}

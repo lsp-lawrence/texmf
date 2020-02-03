@@ -1,0 +1,33 @@
+% Navigation symbols
+\beamertemplatenavigationsymbolsempty
+
+% Color
+\definecolor{defaultbeamerblue}{rgb}{0.2,0.2,0.7}
+
+% Refs
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=defaultbeamerblue,
+	citecolor=green,
+}
+\usepackage{nameref}
+
+% Lists
+\usepackage[shortlabels]{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist[enumerate]{label=\arabic*.}
+
+% Section frame
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}

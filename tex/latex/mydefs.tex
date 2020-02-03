@@ -1,18 +1,9 @@
-% Page Layout
-\usepackage{geometry}        
-\geometry{letterpaper}
-
-% Refs
-\usepackage{hyperref}
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	citecolor=green,
-}
+% Date-time format
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{--}
 
 % Graphics 
 \usepackage{graphicx}
-\graphicspath{{figs/}}
 \usepackage{subcaption}
 
 % Math
@@ -26,6 +17,11 @@
 \newcommand{\complex}{\mathbb{C}}
 \newcommand{\ones}{\mathbbm{1}}
 \newcommand{\sym}{\mathbb{S}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\unit}[1]{\mathbf{\hat{#1}}}
+\newcommand{\iq}{\mathbf{i}}
+\newcommand{\jq}{\mathbf{j}}
+\newcommand{\kq}{\mathbf{k}}
 \let\Re\undefined
 \DeclareMathOperator{\Re}{Re}
 \let\Im\undefined
@@ -39,23 +35,25 @@
 \DeclareMathOperator{\Diag}{Diag}
 \DeclareMathOperator{\range}{\mathbf{range}}
 \DeclareMathOperator{\nullspace}{\mathbf{null}}
+\DeclareMathOperator{\comb}{comb}
+\DeclareMathOperator{\rect}{rect}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\jinc}{jinc}
 \newcommand{\vect}[1]{\mathbbold{#1}}
 \newcommand{\vzeros}[1][]{\vect{0}_{#1}}
 \DeclareSymbolFont{bbold}{U}{bbold}{m}{n}
 \DeclareSymbolFontAlphabet{\mathbbold}{bbold}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{proposition}{Proposition}
+\newcommand{\ev}[1]{\left\langle #1 \right\rangle}
+\DeclareMathOperator{\var}{var}
 
 % Programming
 \usepackage{listings}
 \lstset{language=C++,
                 basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
+%                keywordstyle=\color{blue}\ttfamily,
+%                stringstyle=\color{red}\ttfamily,
+%                commentstyle=\color{green}\ttfamily,
+%                morecomment=[l][\color{magenta}]{\#}
 }
 
 % Date and Time
@@ -67,9 +65,6 @@
 
 % Comments
 \newcommand{\tb}{\color{blue}}
-
-% Enumerate
-\usepackage{enumerate}
 
 % Text
 \renewcommand{\tt}[1]{\texttt{#1}}
